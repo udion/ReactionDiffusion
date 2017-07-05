@@ -9,6 +9,12 @@ An example of final image (*which will depend upon the initialisation of the pet
 <br/>
 <img src="https://github.com/udion/ReactionDiffusion/blob/interactive/images/initialstate0.png" align="left" height="300" width="300">
 <img src="https://github.com/udion/ReactionDiffusion/blob/interactive/images/diffusionpattern0.png" align="right" height="300" width="300">
+
+<br/>
+(intial state) -------------------------------------------------------------------------------------------> (final state)
+<br/>
+<img src="https://github.com/udion/ReactionDiffusion/blob/interactive/images/initialstate1.png" align="left" height="300" width="300">
+<img src="https://github.com/udion/ReactionDiffusion/blob/interactive/images/diffusionpattern1.png" align="right" height="300" width="300">
 <br/>
 <br/>
 <br/>
@@ -24,4 +30,5 @@ An example of final image (*which will depend upon the initialisation of the pet
 <br/>
 <br/>
 # Usages
-clone the repository, go to the **src** directory and open the *index.html* in the browser
+* clone the repository, go to the **src** directory and open the *index.html* in the browser
+* Clicking on canvas anywhere leads to addition of B to that pixel.
