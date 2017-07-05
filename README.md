@@ -7,7 +7,6 @@ An example of final image (*which will depend upon the initialisation of the pet
 <br/>
 <img src="https://github.com/udion/ReactionDiffusion/blob/interactive/images/initialstate0.png" align="left" height="250" width="250">
 <img src="https://github.com/udion/ReactionDiffusion/blob/interactive/images/diffusionpattern0.png" align="right" height="250" width="250">
-         ------------------------>
 <br/>
 # Usages
 clone the repository, go to the **src** directory and open the *index.html* in the browser
