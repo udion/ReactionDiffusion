@@ -72,6 +72,11 @@ function updateNext(){
 	}
 }
 
+function mousePressed(){
+	//making the pixels on the canvas black
+	grid[floor(mouseX)][floor(mouseY)].b = 1; 
+}
+
 function swap_grid_next(){
 	var temp = grid;
 	grid = next;
