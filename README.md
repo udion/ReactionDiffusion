@@ -5,7 +5,7 @@ Initially the whole canvas (*petri dish*) is filled with only one chemical, **A*
 
 An example of final image (*which will depend upon the initialisation of the petri dish*) is the following
 <br/>
-(intial state) ---------------------------------------------------------------------------------------> (final state)
+(intial state) -------------------------------------------------------------------------------------------> (final state)
 <br/>
 <img src="https://github.com/udion/ReactionDiffusion/blob/interactive/images/initialstate0.png" align="left" height="300" width="300">
 <img src="https://github.com/udion/ReactionDiffusion/blob/interactive/images/diffusionpattern0.png" align="right" height="300" width="300">
