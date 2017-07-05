@@ -7,7 +7,7 @@ var kill = 0.062;
 var laplace_kernel = [[0.05, 0.20, 0.05],
 											[0.20, -1.0, 0.20],
 											[0.05, 0.20, 0.05]];
-var delat_t = 1;
+var delta_t = 1;
 
 function setup() {
 	createCanvas(700,700);//creates the canvas
@@ -23,9 +23,10 @@ function setup() {
 	}
 	initPetriDish();
 }
+
 function initPetriDish(){
 	//drop some b in the dish
-	for(var i=width/2-5; i<width/2+5; i++){
+	for(var i=width/2-15; i<width/2+15; i++){
 		for(var j=height/2-5; j<height/2+5; j++){
 			grid[i][j].b = 1;
 		}
@@ -33,15 +34,15 @@ function initPetriDish(){
 }
 
 function draw() {
-	background(255);
+	background(124);
 
 	updateNext();
 	loadPixels();
 	for(var x=0; x<width; x++){
 		for(var y=0; y<height; y++){
 			var pix = (x+y*width)*4;
-			var a = next[x][y].a;
-			var b = next[x][y].b;
+			var a = grid[x][y].a;
+			var b = grid[x][y].b;
 			var c = floor((a-b)*255);
 			pixels[pix+0] = c;
 			pixels[pix+1] = c;
@@ -62,17 +63,17 @@ function updateNext(){
 			next[x][y].a = A +
 										(dA*laplacian('a',x,y) -
 										A*B*B +
-										feed*(1-A));
+										feed*(1-A))*delta_t;
 			next[x][y].b = B +
 										(dB*laplacian('b',x,y) +
 										A*B*B -
-										(kill+feed)*B);
+										(kill+feed)*B)*delta_t;
 		}
 	}
 }
 
 function swap_grid_next(){
-	var temp = next;
+	var temp = grid;
 	grid = next;
 	next = temp;
 }
