@@ -10,8 +10,13 @@ var laplace_kernel = [[0.05, 0.20, 0.05],
 var delta_t = 1;
 
 function setup() {
-	createCanvas(700,700);//creates the canvas
+	canvas = createCanvas(700,700);//creates the canvas
+	canvas.position(500, 10)
 	pixelDensity(1);
+
+	instruct = createDiv('Press anywhere on the canvas to drop chemical B there');
+	instruct.position(680, 730);
+
 	//setting up the grid and next
 	for(var x=0; x<width; x++){
 		grid[x] = [];
@@ -70,6 +75,11 @@ function updateNext(){
 										(kill+feed)*B)*delta_t;
 		}
 	}
+}
+
+function mousePressed(){
+	//making the pixels on the canvas black
+	grid[floor(mouseX)][floor(mouseY)].b = 1;
 }
 
 function swap_grid_next(){
