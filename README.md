@@ -43,6 +43,7 @@ An example of final image (*which will depend upon the initialisation of the pet
 <br/>
 <br/>
 <br/>
+
 # Usages
 * clone the repository, go to the **src** directory and open the *index.html* in the browser
 * Clicking on canvas anywhere leads to addition of B to that pixel.
